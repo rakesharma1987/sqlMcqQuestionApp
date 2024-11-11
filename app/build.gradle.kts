@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.gradle.idea.tcs.extras.isIdeaProjectLevelKey
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.room.ksp)
 }
 
 android {
@@ -42,6 +45,20 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.splashscreen.dependency)
+    implementation(libs.livedata)
+    implementation(libs.viewmodel)
+    implementation(libs.viewmodel.savedstate)
+    implementation(libs.gson.dependency)
+    implementation(libs.room.runtime)
+    implementation(libs.room.compiller.processor)
+    implementation(libs.room.coroutine.support.dependency)
+    ksp(libs.room.compiller.processor)
+    implementation(libs.coroutine.core)
+    implementation(libs.coroutine.android)
+    implementation(libs.billingclient)
+    implementation(libs.event.bus)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

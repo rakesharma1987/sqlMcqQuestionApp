@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "question": "Which Oracle SQL function is used to return the current system date and time?",
+      "type": "radio",
+      "options": [
+        {
+          "id": 1,
+          "text": "SYSDATE"
+        },
+        {
+          "id": 2,
+          "text": "SYSTIMESTAMP"
+        },
+        {
+          "id": 3,
+          "text": "CURRENT_DATE"
+        },
+        {
+          "id": 4,
+          "text": "TO_DATE"
+        }
+      ],
+      "correctAnswerId": 1,
+      "explanation": "SYSDATE returns the current system date and time."
+    },
+    {
+      "question": "Which of the following are valid Oracle SQL data types?",
+      "type": "checkbox",
+      "options": [
+        {
+          "id": 1,
+          "text": "VARCHAR2"
+        },
+        {
+          "id": 2,
+          "text": "INTEGER"
+        },
+        {
+          "id": 3,
+          "text": "NUMBER"
+        },
+        {
+          "id": 4,
+          "text": "DATE"
+        }
+      ],
+      "correctAnswerId": [
+        1,
+        3,
+        4
+      ],
+      "explanation": "Correct! VARCHAR2, NUMBER, and DATE are valid Oracle SQL data types."
+    },
+    {
+      "question": "The GROUP BY clause is used to sort the result set in ascending or descending order.",
+      "type": "radio",
+      "options": [
+        {
+          "id": 1,
+          "text": "TRUE"
+        },
+        {
+          "id": 2,
+          "text": "FALSE"
+        }
+      ],
+      "correctAnswerId": 2,
+      "explanation": "Correct! GROUP BY is used to group rows, not to sort. Use ORDER BY for sorting."
+    },
+    {
+      "question": "Which Oracle SQL function is used to return the current system date and time?",
+      "type": "radio",
+      "options": [
+        {
+          "id": 1,
+          "text": "SYSDATE"
+        },
+        {
+          "id": 2,
+          "text": "SYSTIMESTAMP"
+        },
+        {
+          "id": 3,
+          "text": "CURRENT_DATE"
+        },
+        {
+          "id": 4,
+          "text": "TO_DATE"
+        }
+      ],
+      "correctAnswerId": 1,
+      "explanation": "SYSDATE returns the current system date and time."
+    },
+    {
+      "question": "Which of the following are valid Oracle SQL data types?",
+      "type": "checkbox",
+      "options": [
+        {
+          "id": 1,
+          "text": "VARCHAR2"
+        },
+        {
+          "id": 2,
+          "text": "INTEGER"
+        },
+        {
+          "id": 3,
+          "text": "NUMBER"
+        },
+        {
+          "id": 4,
+          "text": "DATE"
+        }
+      ],
+      "correctAnswerId": [
+        1,
+        3,
+        4
+      ],
+      "explanation": "Correct! VARCHAR2, NUMBER, and DATE are valid Oracle SQL data types."
+    },
+    {
+      "question": "The GROUP BY clause is used to sort the result set in ascending or descending order.",
+      "type": "radio",
+      "options": [
+        {
+          "id": 1,
+          "text": "TRUE"
+        },
+        {
+          "id": 2,
+          "text": "FALSE"
+        }
+      ],
+      "correctAnswerId": 2,
+      "explanation": "Correct! GROUP BY is used to group rows, not to sort. Use ORDER BY for sorting."
+    },
+    {
+      "question": "Write SQL Query?",
+      "type": "radio",
+      "options": [
+        {
+          "id": 1,
+          "text": "SYSDATE"
+        },
+        {
+          "id": 2,
+          "text": "SYSTIMESTAMP"
+        },
+        {
+          "id": 3,
+          "text": "CURRENT_DATE"
+        },
+        {
+          "id": 4,
+          "text": "TO_DATE"
+        }
+      ],
+      "correctAnswerId": 1,
+      "explanation": "SYSDATE returns the current system date and time."
+    }
+  ]
+}
