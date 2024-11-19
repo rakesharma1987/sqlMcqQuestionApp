@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "question": "Which Oracle SQL function is used to return the current system date and time?",
       "type": "radio",
@@ -160,5 +159,4 @@
       "correctAnswerId": 1,
       "explanation": "SYSDATE returns the current system date and time."
     }
-  ]
-}
+]

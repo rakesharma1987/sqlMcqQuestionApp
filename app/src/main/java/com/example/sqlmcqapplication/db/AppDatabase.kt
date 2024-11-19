@@ -7,6 +7,8 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [QuestionEntity::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {
+    abstract val dao: AppDao
+
     companion object{
         @Volatile
         private var INSTANCE: AppDatabase? = null
