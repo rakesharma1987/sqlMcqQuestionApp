@@ -1,6 +1,6 @@
 [versions]
-agp = "7.3.0"
-kotlin = "1.9.24"
+agp = "8.7.2"
+kotlin = "2.0.21"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -35,7 +35,6 @@ gson-dependency = {group = "com.google.code.gson", name = "gson", version.ref = 
 room-runtime = {group = "androidx.room", name = "room-runtime", version.ref = "room_version"}
 room-compiller-processor = {group = "androidx.room", name = "room-compiler", version.ref = "room_version"}
 room-coroutine-support-dependency = {group = "androidx.room", name = "room-ktx", version.ref = "room_version"}
-#room-ksp = {group = "androidx.room", name = "room-compiler", version.ref = "room_version"}
 coroutine-core = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine_version"}
 coroutine-android = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutine_version"}
 event-bus = {group = "org.greenrobot", name = "eventbus", version.ref = "event-bus-version"}

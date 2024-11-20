@@ -43,7 +43,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -55,7 +54,7 @@ dependencies {
     implementation(libs.viewmodel.savedstate)
     implementation(libs.gson.dependency)
     implementation(libs.room.runtime)
-    implementation(libs.room.compiller.processor)
+    annotationProcessor(libs.room.compiller.processor)
     implementation(libs.room.coroutine.support.dependency)
     ksp(libs.room.compiller.processor)
     implementation(libs.coroutine.core)

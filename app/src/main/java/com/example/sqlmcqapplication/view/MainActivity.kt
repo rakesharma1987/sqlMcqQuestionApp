@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.sqlmcqapplication.R
 import com.example.sqlmcqapplication.databinding.ActivityMainBinding
 import com.example.sqlmcqapplication.db.AppDatabase
+import com.example.sqlmcqapplication.db.QuestionEntity
 import com.example.sqlmcqapplication.factory.DbFactory
 import com.example.sqlmcqapplication.model.QuestionData
 import com.example.sqlmcqapplication.repository.AppRepository
@@ -37,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         assetFile = readJSONFromAsset("mcq.json")
         arrayList = ArrayList<String>()
-        val list = Gson().fromJson(assetFile, QuestionData::class.java)
+        val list = Gson().fromJson(assetFile, QuestionEntity::class.java)
 
         Handler().postDelayed({
-            viewModel.saveQuestion(list)
+//            viewModel.saveQuestion(list)
         }, 5000)
 
     }

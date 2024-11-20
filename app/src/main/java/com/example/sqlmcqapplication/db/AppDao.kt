@@ -10,7 +10,7 @@ import com.example.sqlmcqapplication.model.Question
 @Dao
 interface AppDao {
     @Insert
-    suspend fun saveQuestion(question: List<String>): Long
+    suspend fun saveQuestion(question: List<QuestionEntity>)
 
     @Query("SELECT * FROM questionentity")
     fun getAllQuestion(): LiveData<List<QuestionEntity>>

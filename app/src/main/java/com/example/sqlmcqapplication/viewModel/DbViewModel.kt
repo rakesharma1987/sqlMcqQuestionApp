@@ -7,7 +7,7 @@ import com.example.sqlmcqapplication.repository.AppRepository
 import kotlinx.coroutines.launch
 
 class DbViewModel(private var appRepository: AppRepository): ViewModel() {
-    fun saveQuestion(data: List<String>){
+    fun saveQuestion(data: List<QuestionEntity>){
         viewModelScope.launch {
             appRepository.saveQuestion(data)
         }
