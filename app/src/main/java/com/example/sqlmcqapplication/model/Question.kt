@@ -5,5 +5,6 @@ data class Question(
     var type: String,
     var options: List<Option>,
     var correctAnswerId: Int,
+    var correctAnsIdList: List<Int>,
     var explanation: String
 )

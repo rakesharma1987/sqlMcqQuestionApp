@@ -1,3 +1,3 @@
 package com.example.sqlmcqapplication.model
 
-class QuestionData: ArrayList<String>()
+class QuestionData: ArrayList<Question>()

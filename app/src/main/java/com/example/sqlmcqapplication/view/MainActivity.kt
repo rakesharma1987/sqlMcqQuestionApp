@@ -1,5 +1,6 @@
 package com.example.sqlmcqapplication.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        supportActionBar!!.hide()
+//        supportActionBar!!.hide()
         setContentView(R.layout.activity_main)
 
         val dao = AppDatabase.getInstance(this).dao
@@ -38,11 +39,12 @@ class MainActivity : AppCompatActivity() {
 
         assetFile = readJSONFromAsset("mcq.json")
         arrayList = ArrayList<String>()
-        val list = Gson().fromJson(assetFile, QuestionEntity::class.java)
+        val list = Gson().fromJson(assetFile, QuestionData::class.java)
 
         Handler().postDelayed({
 //            viewModel.saveQuestion(list)
-        }, 5000)
+            startActivity(Intent(this, DashboardActivity::class.java))
+        }, 3000)
 
     }
 
