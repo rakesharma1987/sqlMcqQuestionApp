@@ -39,10 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         assetFile = readJSONFromAsset("mcq.json")
         arrayList = ArrayList<String>()
-        val list = Gson().fromJson(assetFile, QuestionData::class.java)
-
+        val list = Gson().toJson(assetFile)
         Handler().postDelayed({
-//            viewModel.saveQuestion(list)
+            viewModel.saveQuestion(QuestionEntity(question = list))
             startActivity(Intent(this, DashboardActivity::class.java))
         }, 3000)
 

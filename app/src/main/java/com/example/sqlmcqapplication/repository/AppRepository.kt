@@ -4,7 +4,7 @@ import com.example.sqlmcqapplication.db.AppDao
 import com.example.sqlmcqapplication.db.QuestionEntity
 
 class AppRepository(private var appDao: AppDao) {
-    suspend fun saveQuestion(question: List<QuestionEntity>){
+    suspend fun saveQuestion(question: QuestionEntity){
         return appDao.saveQuestion(question)
     }
 
