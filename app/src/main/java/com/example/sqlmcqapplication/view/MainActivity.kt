@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         arrayList = ArrayList<String>()
         val list = Gson().toJson(assetFile)
         Handler().postDelayed({
+            viewModel.deleteQuestion
             viewModel.saveQuestion(QuestionEntity(question = list))
             startActivity(Intent(this, DashboardActivity::class.java))
         }, 3000)

@@ -14,4 +14,5 @@ class DbViewModel(private var appRepository: AppRepository): ViewModel() {
     }
 
     val getQuestion = appRepository.getQuestion
+    val deleteQuestion = appRepository.deleteQuestion
 }
