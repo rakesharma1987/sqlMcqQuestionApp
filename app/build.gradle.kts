@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.coroutine.android)
     implementation(libs.billingclient)
     implementation(libs.event.bus)
+    implementation(libs.dataStoreDependency)
+    implementation(libs.lifecycleDependency)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

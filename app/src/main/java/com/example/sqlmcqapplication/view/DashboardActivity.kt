@@ -30,10 +30,6 @@ class DashboardActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
         viewModel.getQuestion.observe(this, Observer {it: List<QuestionEntity> ->
             Log.d("TAG", "onCreate: $it")
-            for (position in 0..it.size){
-                questionList.add(Gson().fromJson(it[position].question, Question::class.java))
-                Log.d("Question", ""+questionList.get(0))
-            }
         })
     }
 }

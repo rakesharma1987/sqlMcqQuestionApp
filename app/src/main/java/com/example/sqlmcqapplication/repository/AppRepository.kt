@@ -9,5 +9,9 @@ class AppRepository(private var appDao: AppDao) {
     }
 
     val getQuestion = appDao.getAllQuestion()
-    val deleteQuestion = appDao.deleteQuestions()
+//    val deleteQuestion = appDao.deleteQuestions()
+
+    suspend fun getCount(): Int{
+        return appDao.getCount()
+    }
 }

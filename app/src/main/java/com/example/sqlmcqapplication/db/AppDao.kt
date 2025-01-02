@@ -16,7 +16,7 @@ interface AppDao {
     @Query("SELECT * FROM questionentity")
     fun getAllQuestion(): LiveData<List<QuestionEntity>>
 
-    @Query("DELETE FROM questionentity")
-    fun deleteQuestions()
+    @Query("SELECT COUNT(*) FROM questionentity")
+    suspend fun getCount(): Int
 
 }

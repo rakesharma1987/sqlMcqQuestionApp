@@ -7,15 +7,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.sqlmcqapplication.R
+import com.example.sqlmcqapplication.dataStore.UserPreferences
 import com.example.sqlmcqapplication.databinding.ActivityMainBinding
 import com.example.sqlmcqapplication.db.AppDatabase
 import com.example.sqlmcqapplication.db.QuestionEntity
 import com.example.sqlmcqapplication.factory.DbFactory
-import com.example.sqlmcqapplication.model.QuestionData
 import com.example.sqlmcqapplication.repository.AppRepository
 import com.example.sqlmcqapplication.viewModel.DbViewModel
 import com.google.gson.Gson
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: DbViewModel
     lateinit var assetFile: String
     lateinit var arrayList: ArrayList<String>
+    private lateinit var userPreferences: UserPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 //        supportActionBar!!.hide()
         setContentView(R.layout.activity_main)
+        userPreferences = UserPreferences(this)
 
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
@@ -41,8 +46,13 @@ class MainActivity : AppCompatActivity() {
         arrayList = ArrayList<String>()
         val list = Gson().toJson(assetFile)
         Handler().postDelayed({
-            viewModel.deleteQuestion
-            viewModel.saveQuestion(QuestionEntity(question = list))
+            lifecycleScope.launch {
+                val count = viewModel.getCount()
+                if (count.await() == 0){
+                    viewModel.saveQuestion(QuestionEntity(question = list))
+                    userPreferences.saveFirstTime(true)
+                }
+            }
             startActivity(Intent(this, DashboardActivity::class.java))
         }, 3000)
 
